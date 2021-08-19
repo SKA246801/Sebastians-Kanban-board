@@ -2,7 +2,9 @@ import react from 'react'
 
 function Dashboard() {
     return (
-        <div>Dashboard fdasfdsfsa</div>
+        <div className='dashboard'>
+            Dashboard
+        </div>
     )
 }
 
