@@ -4,13 +4,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
 import Navbar from './components/Navbar'
 import Account from './components/Account'
-import Settings from './components/Settings'
+import Support from './components/Support'
 
 
 function App() {
-
-
-
   return (
    <>
      <Router>
@@ -18,7 +15,7 @@ function App() {
         <Switch>
             <Route path='/dashboard' component={Dashboard}/>
             <Route path='/account' component={Account}/>
-            <Route path='/settings' component={Settings}/>
+            <Route path='/support' component={Support}/>
         </Switch>
      </Router>
    </>
