@@ -1,21 +1,32 @@
 .navbar {
-    background-color: #060b26;
+    background-color: #0e0520;
     height: 80px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
 }
 
 .menu-bars {
     margin-right: 1%;
+    margin-left: 1%;
     font-size: 2.5vw;
     background: none;
     color: white;
 }
 
+.menu-bars:hover {
+    color: #00a386;
+}
+
+.plus-icon {
+    font-size: 2.5vw;
+    color: white;
+    margin-right: 1%;
+}
+
 .nav-menu {
-    background-color: #060b26;
-    width: 20%;
+    background-color: #0e0520;
+    width: 15%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -52,7 +63,7 @@
 }
 
 .nav-text a:hover {
-    background-color: aqua;
+    background-color: #00a386;
 }
 
 .nav-menu-items {
@@ -60,10 +71,13 @@
 }
 
 .navbar-toggle {
-    background-color: #060b26;
-    width: 100%;
+    background-color: #0e0520;
     height: 80px;
     display: flex;
     justify-content: start;
     align-items: center;
+}
+
+.title {
+    color: white;
 }
