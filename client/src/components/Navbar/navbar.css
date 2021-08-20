@@ -24,6 +24,10 @@
     margin-right: 1%;
 }
 
+.plus-icon:hover {
+    color: #00a386;
+}
+
 .nav-menu {
     background-color: #0e0520;
     width: 15%;

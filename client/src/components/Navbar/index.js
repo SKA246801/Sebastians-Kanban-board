@@ -4,6 +4,7 @@ import * as AiIcons from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { sidebarData } from './data'
 import './navbar.css'
+import Modal from '../Modal'
 
 function Navbar() {
 
@@ -19,21 +20,26 @@ function Navbar() {
             title: 'Dashboard'
         },
         {
-            title: 'Settings'
+            title: 'Support'
         }
       ])
     
-      const [currentCategory, setCurrentCategory] = useState(categories[0])
+    const [currentCategory, setCurrentCategory] = useState(categories[0])
+
+    const [showModal, setShowModal] = useState(false)
+
+    const openModal = () => setShowModal(!showModal)
 
     return (
         <>
+            <Modal showModal={showModal} setShowModal={setShowModal} />
             <div className='navbar'>
                 <Link to='#' className='menu-bars'>
                     <FaIcons.FaBars onClick={showSidebar} />
                 </Link>
-                    <h1 key={currentCategory.title} className={currentCategory.class2}>{currentCategory.title}</h1>
-                <Link to='/create' className='plus-icon'>
-                    <AiIcons.AiOutlinePlus />
+                   <h1 key={currentCategory.title} className={currentCategory.class2}>{currentCategory.title}</h1>
+                <Link to='#' className='plus-icon'>
+                    <AiIcons.AiOutlinePlus onClick={openModal}/>
                 </Link>
             </div>
             

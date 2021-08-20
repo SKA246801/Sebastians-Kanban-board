@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export const sidebarData = [
     {
@@ -14,8 +14,8 @@ export const sidebarData = [
         class2: 'title'
     },
     {
-        title: 'Settings',
-        path: '/settings',
+        title: 'Support',
+        path: '/support',
         class: 'nav-text',
         class2: 'title'
     },
