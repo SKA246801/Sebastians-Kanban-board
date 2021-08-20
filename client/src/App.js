@@ -1,11 +1,11 @@
 import './App.css'
-import React, { useState } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
 import Navbar from './components/Navbar'
 import Account from './components/Account'
 import Support from './components/Support'
-
+import Messaging from './components/Messaging'
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Switch>
             <Route path='/dashboard' component={Dashboard}/>
             <Route path='/account' component={Account}/>
+            <Route path='/messaging' component={Messaging}/>
             <Route path='/support' component={Support}/>
         </Switch>
      </Router>

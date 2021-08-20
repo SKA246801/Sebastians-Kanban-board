@@ -14,6 +14,12 @@ export const sidebarData = [
         class2: 'title'
     },
     {
+        title: 'Messaging',
+        path: '/messaging',
+        class: 'nav-text',
+        class2: 'title'
+    },
+    {
         title: 'Support',
         path: '/support',
         class: 'nav-text',
