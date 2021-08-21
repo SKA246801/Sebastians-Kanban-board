@@ -3,7 +3,7 @@ import React from 'react'
 function Account() {
     return (
         <div className='account'>
-            Account
+            <button>Logout</button>
         </div>
     )
 }
