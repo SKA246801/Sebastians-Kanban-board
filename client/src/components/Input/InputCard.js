@@ -24,23 +24,25 @@ const useStyle = makeStyles((theme) => ({
     }
 }))
 
-export default function InputCard({setOpen, listId}) {
+export default function InputCard({setOpen, listId, type}) {
     const classes = useStyle();
-    const {addMoreCard} = useContext(storeApi);
-    const [cardContent, setCardContent] = useState('')
+    const {addMoreCard, addMoreList} = useContext(storeApi);
+    const [content, setContent] = useState('')
+
     const handleOnChange = (e) => {
-        setCardContent(e.target.value)
+        setContent(e.target.value)
     }
 
     const handleBtnConfirm = () => {
-        addMoreCard(cardContent, listId);
-        setCardContent('')
-        setOpen(false);
-    }
-
-    const handleBlur = () => {
-        setOpen(false);
-        setCardContent('')
+        if (type === 'card') {
+            addMoreCard(content, listId);
+            setContent('')
+            setOpen(false);
+        } else {
+            addMoreList(content)
+            setContent('')
+            setOpen(false)
+        }
     }
 
     return (
@@ -50,24 +52,24 @@ export default function InputCard({setOpen, listId}) {
                     <InputBase 
                     onChange={handleOnChange}
                     multiline
-                    onBlur={handleBlur}
+                    onBlur={() => setOpen(false) }
                     fullWidth
                     inputProps={{
                         className: classes.input,
                     }}
-                    value={cardContent}
-                    placeholder="Enter task" 
+                    value={content}
+                    placeholder={type === 'card' ? "Enter task": "Enter list title"} 
                 />
                 </Paper>
             </div>
             <div className={classes.confirm}>
                 <Button className={classes.btnConfirm} onClick={handleBtnConfirm}>
-                    Add Task
+                    {type === "card" ? "Add task" : "Add list"}
                 </Button>
                 <IconButton onClick={() => setOpen(false)}>
                     <ClearIcon />
                 </IconButton>  
             </div>
         </div>
-    )
+    );
 }
