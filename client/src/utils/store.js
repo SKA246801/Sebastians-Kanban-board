@@ -1,3 +1,6 @@
+
+// need to add user data. I believe best bet is to have each card have user: userID
+
 const cards = [
     {
         id: 'card-1',
