@@ -6,13 +6,7 @@
   --cream: #f7fff7;
 }
 
-* {
-  box-sizing: border-box;
+body {
+  background-color: var(--white);
   margin: 0;
-  padding: 0;
-}
-
-.support-form{
-  max-width: 90%;
-  margin: 2% auto 0 auto
 }

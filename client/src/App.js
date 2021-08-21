@@ -6,6 +6,8 @@ import Navbar from './components/Navbar'
 import Account from './components/Account'
 import Support from './components/Support'
 import Messaging from './components/Messaging'
+import Kanban from './components/Kanban'
+
 
 function App() {
   return (
