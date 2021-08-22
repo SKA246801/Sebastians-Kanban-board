@@ -11,23 +11,7 @@ function Navbar() {
 
   const showSidebar = () => setSidebar(!sidebar)
 
-  const categories = useState([
-    {
-      title: "Account",
-    },
-    {
-      title: "Dashboard",
-    },
-    {
-      title: "Support",
-    },
-    {
-      title: "Messaging",
-    },
-  ])
-
-  const [currentCategory, setCurrentCategory] = useState(categories[0])
-
+  const [currentCategory, setCurrentCategory] = useState(sidebarData)
   const [showModal, setShowModal] = useState(false)
 
   const openModal = () => setShowModal(!showModal)
@@ -42,17 +26,13 @@ function Navbar() {
         <h1 key={currentCategory.title} className={currentCategory.class2}>
           {currentCategory.title}
         </h1>
-        {
-          currentCategory.title === 'Dashboard' ? (
-
-            <Link to="#" className="plus-icon">
-              <AiIcons.AiOutlinePlus onClick={openModal} />
-            </Link>
-
-          ) : (
-            <AiIcons.AiOutlinePlus style={{color: '#0e0520' }} />
-          ) 
-        }
+        {currentCategory.title === "Dashboard" ? (
+          <Link to="#" className="plus-icon">
+            <AiIcons.AiOutlinePlus onClick={openModal} />
+          </Link>
+        ) : (
+          <AiIcons.AiOutlinePlus style={{ color: "#0e0520" }} />
+        )}
       </div>
 
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
@@ -63,6 +43,11 @@ function Navbar() {
             </Link>
           </li>
           {sidebarData.map((item, i) => {
+            const url = ('http://localhost:3000/dashboard')
+            if (document.location.href === url) {
+              const boardName = document.querySelector('.title')
+              boardName.innerText = 'Dashboard'
+            }
             return (
               <li key={i} className={item.class}>
                 <Link to={item.path} onClick={() => setCurrentCategory(item)}>
