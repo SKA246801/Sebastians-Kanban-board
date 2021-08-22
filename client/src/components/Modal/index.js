@@ -33,6 +33,7 @@ function Modal({showModal, setShowModal}) {
         }
         const boardName = document.querySelector('.title')
         boardName.innerText = projectName.name
+        setCharacterCount(0)
     }
 
     console.log(characterCount)
