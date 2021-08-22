@@ -14,14 +14,15 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/account" component={Account} />
-          <Route path="/messaging" component={Messaging} />
-          <Route path="/support" component={Support} />
+            <Route path='/kanban' component={Kanban} />
+            <Route path='/dashboard' component={Dashboard}/>
+            <Route path='/account' component={Account}/>
+            <Route path='/messaging' component={Messaging}/>
+            <Route path='/support' component={Support}/>
         </Switch>
-      </Router>
-    </>
-  );
+     </Router>
+   </>
+  )
 }
 
 export default App;

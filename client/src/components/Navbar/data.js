@@ -24,11 +24,5 @@ export const sidebarData = [
         path: '/support',
         class: 'nav-text',
         class2: 'title'
-    },
-    {
-        title: 'Logout',
-        path: '/',
-        class: 'nav-text',
-        class2: 'title'
     }
 ]
