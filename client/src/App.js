@@ -15,6 +15,7 @@ function App() {
      <Router>
         <Navbar />
         <Switch>
+            <Route path='/kanban' component={Kanban} />
             <Route path='/dashboard' component={Dashboard}/>
             <Route path='/account' component={Account}/>
             <Route path='/messaging' component={Messaging}/>
@@ -22,7 +23,7 @@ function App() {
         </Switch>
      </Router>
    </>
-  );
+  )
 }
 
 export default App;

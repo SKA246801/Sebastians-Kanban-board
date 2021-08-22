@@ -42,9 +42,17 @@ function Navbar() {
         <h1 key={currentCategory.title} className={currentCategory.class2}>
           {currentCategory.title}
         </h1>
-        <Link to="#" className="plus-icon">
-          <AiIcons.AiOutlinePlus onClick={openModal} />
-        </Link>
+        {
+          currentCategory.title === 'Dashboard' ? (
+
+            <Link to="#" className="plus-icon">
+              <AiIcons.AiOutlinePlus onClick={openModal} />
+            </Link>
+
+          ) : (
+            <AiIcons.AiOutlinePlus style={{color: '#0e0520' }} />
+          ) 
+        }
       </div>
 
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
