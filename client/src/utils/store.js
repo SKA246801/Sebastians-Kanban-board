@@ -31,23 +31,3 @@ const data = {
 };
 
 export default data;
-
-const kanban = {
-  id: 1,
-  lists: [1],
-};
-
-const list = {
-  id: 1,
-  task: ["asdf", "123;lkjas"], // task id
-};
-
-const task = {
-  id: 1,
-  name: "thing",
-};
-
-const task2 = {
-  id: 2,
-  name: "do another thing",
-};
