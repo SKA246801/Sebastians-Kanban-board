@@ -48,7 +48,7 @@ db.once('open', async () => {
         
         await User.updateOne(
             { _id: userId },
-            { $push: { kanban: createdKanban._id, } }
+            { $push: { kanban: createdKanban._id } }
         )
 
         createdKanbans.push(createdKanban)
