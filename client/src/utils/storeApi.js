@@ -1,2 +1,2 @@
-import react from 'react'
-export default react.createContext(null)
+import react from "react";
+export default react.createContext(null);
