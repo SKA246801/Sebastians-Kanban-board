@@ -14,10 +14,10 @@ const useStyle = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
   btnConfirm: {
-    background: "#5AAC44",
+    background: "#274156",
     color: "#fff",
     "&:hover": {
-      background: alpha("#5AAC44", 0.75),
+      background: alpha("#274156", 0.75),
     },
   },
   confirm: {
