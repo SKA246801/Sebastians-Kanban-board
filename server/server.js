@@ -1,34 +1,33 @@
 const express = require('express');
-const dotenv = require('dotenv');
-const cors = require('cors');
-const connectDB = require('./config/db');
+// import ApolloServer
+const { ApolloServer } = require('apollo-server-express');
 
-dotenv.config({ path: './config/config.env' });
+// import our typeDefs and resolvers
+const { typeDefs, resolvers } = require('./schemas');
+const db = require('./config/connection');
 
-connectDB();
-
-const auth = require('./routes/auth.routes');
-
+const PORT = process.env.PORT || 3001;
 const app = express();
-app.use(cors());
+// create a new Apollo server and pass in our schema data
+const server = new ApolloServer({
+  typeDefs,
+  resolvers
+});
+
+// integrate our Apollo server with the Express application as middleware
+async function startup() {
+    await server.start();
+    server.applyMiddleware({ app });
+  }
+  startup();
+
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use('/api/auth', auth);
-
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/build'));
-
-  app.get('*', (req, res) =>
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))
-  );
-}
-app.get('/', (req, res) => {
-  res.send('Test');
+db.once('open', () => {
+  app.listen(PORT, () => {
+    console.log(`API server running on port ${PORT}!`);
+    // log where we can go to test our GQL API
+    console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+  });
 });
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () =>
-  console.log(
-    `Your sample of MERN authentication is running at ${PORT} in ${process.env.NODE_ENV} environment`
-  )
-);
