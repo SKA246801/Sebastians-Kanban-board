@@ -19,7 +19,7 @@ const useStyle = makeStyles((theme) => ({
 }))
 
 function Kanban() {
-      // This is pulling all our data. Eventually I am going to want to create a Kanban board component
+  // This is pulling all our data. Eventually I am going to want to create a Kanban board component
   // That has everything in this file so we just call Kanban.
   const [data, setData] = useState(store);
   const classes = useStyle();

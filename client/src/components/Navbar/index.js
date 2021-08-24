@@ -45,8 +45,12 @@ function Navbar() {
           {sidebarData.map((item, i) => {
             const url = ('http://localhost:3000/dashboard')
             if (document.location.href === url) {
-              const boardName = document.querySelector('.title')
-              boardName.innerText = 'Dashboard'
+              try{
+                const boardName = document.querySelector('.title')
+                boardName.innerText = 'Dashboard'
+              } catch(e){
+                console.log(e)
+              }
             }
             return (
               <li key={i} className={item.class}>
