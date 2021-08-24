@@ -33,6 +33,10 @@ const typeDefs = gql`
         kanban(_id: ID!): Kanban
         task: [Task]
     }
+    type Mutation {
+        login(username: String!, password: String!): User
+        addUser(username: String!, password: String!): User
+    }
 `
 
 // export the typeDefs
