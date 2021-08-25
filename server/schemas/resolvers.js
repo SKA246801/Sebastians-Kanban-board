@@ -86,10 +86,12 @@ const resolvers = {
       if (context.user) {
         const updatedList = await List.findOneAndUpdate( { _id: listId }, { $push: { task: { taskContent, userAssigned } } }, { new: true } )
 
-
+        return updatedList
       }
+
+      throw new AuthenticationError('You need to be logged in')
     }
-  },
+  }
 }
 
 module.exports = resolvers

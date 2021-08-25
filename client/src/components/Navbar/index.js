@@ -31,7 +31,7 @@ function Navbar() {
             <AiIcons.AiOutlinePlus onClick={openModal} />
           </Link>
         ) : (
-          <AiIcons.AiOutlinePlus style={{ color: "#0e0520" }} />
+          <AiIcons.AiOutlinePlus style={{ color: "#274156" }} />
         )}
       </div>
 
