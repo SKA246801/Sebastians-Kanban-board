@@ -10,6 +10,7 @@ import Kanban from "./components/Kanban";
 import Landing from "./components/Landing";
 import Login from "./utils/Login";
 import Register from "./utils/Register";
+import Homepage from "./components/Homepage";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/landing" component={Landing} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
+          <Route path = '/' component={Homepage} />
         </Switch>
       </Router>
     </>

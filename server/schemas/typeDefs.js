@@ -27,11 +27,24 @@ const typeDefs = gql`
         friends: [User]
     }
     type Query {
+        me: User
         users: [User]
         user(username: String!): User
         kanbans(username: String): [Kanban]
         kanban(_id: ID!): Kanban
         task: [Task]
+    }
+    type Mutation {
+        login(username: String!, password: String!): Auth
+        addUser(username: String!, password: String!): Auth
+        addKanban(kanbanTitle: String!): Kanban
+        addList(kanbanId: ID!, listTitle: String!): Kanban
+        addTask(listId: ID!, taskContent: String!, userAssigned: String!): List
+        addFriend(friendId: ID!): User
+    }
+    type Auth {
+        token: ID!
+        user: User
     }
 `
 
