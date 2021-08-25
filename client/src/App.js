@@ -22,7 +22,7 @@ function App() {
           <Route path="/account" component={Account} />
           <Route path="/messaging" component={Messaging} />
           <Route path="/support" component={Support} />
-          <Route exact path="/" component={Landing} />
+          <Route exact path="/landing" component={Landing} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
         </Switch>
