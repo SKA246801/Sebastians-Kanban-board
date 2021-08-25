@@ -7,6 +7,9 @@ import Account from "./components/Account";
 import Support from "./components/Support";
 import Messaging from "./components/Messaging";
 import Kanban from "./components/Kanban";
+import Landing from "./components/Landing";
+import Login from "./utils/Login";
+import Register from "./utils/Register";
 
 function App() {
   return (
@@ -14,15 +17,18 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-            <Route path='/kanban' component={Kanban} />
-            <Route path='/dashboard' component={Dashboard} />
-            <Route path='/account' component={Account}/>
-            <Route path='/messaging' component={Messaging}/>
-            <Route path='/support' component={Support}/>
+          <Route path="/kanban" component={Kanban} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/account" component={Account} />
+          <Route path="/messaging" component={Messaging} />
+          <Route path="/support" component={Support} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
         </Switch>
-     </Router>
-   </>
-  )
+      </Router>
+    </>
+  );
 }
 
 export default App;
