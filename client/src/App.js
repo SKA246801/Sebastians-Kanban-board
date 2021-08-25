@@ -7,6 +7,9 @@ import Account from "./components/Account";
 import Support from "./components/Support";
 import Messaging from "./components/Messaging";
 import Kanban from "./components/Kanban";
+import Landing from "./components/Landing";
+import Login from "./utils/Login";
+import Register from "./utils/Register";
 import Homepage from "./components/Homepage";
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
           <Route path="/account" component={Account} />
           <Route path="/messaging" component={Messaging} />
           <Route path="/support" component={Support} />
+          <Route exact path="/landing" component={Landing} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
           <Route path = '/' component={Homepage} />
         </Switch>
       </Router>
