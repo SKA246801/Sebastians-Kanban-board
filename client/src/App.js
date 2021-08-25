@@ -20,6 +20,7 @@ function App() {
           <Route path="/account" component={Account} />
           <Route path="/messaging" component={Messaging} />
           <Route path="/support" component={Support} />
+          <Route path = '/' component={Homepage} />
         </Switch>
       </Router>
     </>

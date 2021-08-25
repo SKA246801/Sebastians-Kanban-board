@@ -75,7 +75,7 @@ export default function Body() {
     <body className={classes.body}>
       <div className={classes.whatWeDo}>
         <img
-          src="../../../../assets/kanban_board_image.jpg"
+          src={require("../../assets/kanban_board_image.jpg").default}
           alt="Kanban board"
           className={classes.myImage}
         />
@@ -97,7 +97,7 @@ export default function Body() {
       <div className={classes.company}>
         <img
           className={classes.imageCompany}
-          src="../../../../assets/company_image.png"
+          src={require("../../assets/company_image.png").default}
           alt="Kanban Company"
         />
         <div>
@@ -117,39 +117,39 @@ export default function Body() {
       <div className={classes.reviewClass}>
         <div className={classes.dropdown}>
           <img
-            src="../../../../assets/Picturereview1.png"
+            src={require("../../assets/Picturereview1.png").default}
             className={classes.dropdownImg}
             alt="review 1"
           />
         </div>
         <div className={classes.dropdownContent}>
-          <img src="../../../../assets/Picturereview1.png" alt="review 1" />
+          <img src={require("../../assets/Picturereview1.png").default} alt="review 1" />
           <div className={classes.desc}>Amazing Review</div>
         </div>
       </div>
       <div className={classes.reviewClass}>
         <div className={classes.dropdown}>
           <img
-            src="../../../../assets/Picturereview1.png"
+            src={require("../../assets/Picturereview1.png").default}
             className={classes.dropdownImg}
             alt="review 1"
           />
         </div>
         <div className={classes.dropdownContent}>
-          <img src="../../../../assets/Picturereview1.png" alt="review 1" />
+          <img src={require("../../assets/Picturereview1.png").default} alt="review 1" />
           <div className={classes.desc}>Amazing Review</div>
         </div>
       </div>
       <div className={classes.reviewClass}>
         <div className={classes.dropdown}>
           <img
-            src="../../../../assets/Picturereview1.png"
+            src={require("../../assets/Picturereview1.png").default}
             className={classes.dropdownImg}
             alt="review 1"
           />
         </div>
         <div className={classes.dropdownContent}>
-          <img src="../../../../assets/Picturereview1.png" alt="review 1" />
+          <img src={require("../../assets/Picturereview1.png").default} alt="review 1" />
           <div className={classes.desc}>Amazing Review</div>
         </div>
       </div>
