@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyle = makeStyles((theme) => ({
+const useStyle = makeStyles(() => ({
   header: {
     padding: "20px 35px",
     backgroundColor: "#274156",
@@ -16,6 +16,9 @@ const useStyle = makeStyles((theme) => ({
   a: {
     color: "#F7F9F9",
     textDecoration: "none",
+    "&:hover": {
+      color: "white"
+    },
   },
   nav: {
     float: "right",
@@ -55,21 +58,6 @@ export default function Navbar() {
       </h1>
       <nav className={classes.nav}>
         <ul>
-          <li className={classes.li}>
-            <a href="#Platform" className={classes.listItemA}>
-              What We Do
-            </a>
-          </li>
-          <li className={classes.li}>
-            <a href="#Customers" className={classes.listItemA}>
-              Customers
-            </a>
-          </li>
-          <li className={classes.li}>
-            <a href="#Company" className={classes.listItemA}>
-              Company
-            </a>
-          </li>
           <li className={classes.li}>
             <button type="button" className={classes.loginButton}>
               Login

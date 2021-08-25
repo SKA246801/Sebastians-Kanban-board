@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyle = makeStyles((theme) => ({
+const useStyle = makeStyles(() => ({
   body: {
     backgroundColor: "#F7FFF7",
     fontFamily: "Arial, Helvetica, sans-serif",
@@ -108,8 +108,6 @@ export default function Body() {
             earum, quis unde, repudiandae quidem quam est aperiam cupiditate
             quas voluptate perferendis?
           </p>
-          <br />
-          <h4 className={classes.who}>Learn more about us</h4>
         </div>
       </div>
       <h1 className={classes.reviews}>They Like Us</h1>
