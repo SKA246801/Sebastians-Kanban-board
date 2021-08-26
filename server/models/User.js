@@ -1,11 +1,9 @@
-
 const jwt = require("jsonwebtoken");
 const keys = require("../config/keys");
 const express = require("express");
 
-const { Schema, model } = require('mongoose')
-const bcrypt = require('bcrypt')
-
+const { Schema, model } = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const userSchema = new Schema(
   {
@@ -23,9 +21,8 @@ const userSchema = new Schema(
     kanban: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Kanban'
-      }
-
+        ref: "Kanban",
+      },
     ],
     friends: [
       {
@@ -39,7 +36,7 @@ const userSchema = new Schema(
       virtuals: true,
     },
   }
-)
+);
 
 //load input validation
 const validateRegisterInput = require("../utils/register");
@@ -114,24 +111,24 @@ router.post("/register", (req, res) => {
   });
 
 // set up pre-save middleware to create password
-userSchema.pre('save', async function(next) {
-  if (this.isNew || this.isModified('password')) {
-    const saltRounds = 10
-    this.password = await bcrypt.hash(this.password, saltRounds)
+userSchema.pre("save", async function (next) {
+  if (this.isNew || this.isModified("password")) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
   }
 
-  next()
-})
+  next();
+});
 
 // compare the incoming password with the hashed password
-userSchema.methods.isCorrectPassword = async function(password) {
-  return bcrypt.compare(password, this.password)
-}
+userSchema.methods.isCorrectPassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
 
-userSchema.virtual('friendCount').get(function() {
-  return this.friends.length
-})
+userSchema.virtual("friendCount").get(function () {
+  return this.friends.length;
+});
 
-const User = model('User', userSchema)
+const User1 = model("User", userSchema);
 
-module.exports = User
+module.exports = User;
