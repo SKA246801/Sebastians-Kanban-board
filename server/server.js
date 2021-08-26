@@ -1,10 +1,4 @@
-const passport = require("passport");
-
-const users = require("./models/User");
-
 // import our typeDefs and resolvers
-const { typeDefs, resolvers } = require("./schemas");
-const db = require("./config/connection");
 const express = require('express')
 // import ApolloServer
 const { ApolloServer } = require('apollo-server-express')
