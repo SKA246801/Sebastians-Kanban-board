@@ -75,7 +75,7 @@ export default function Body() {
     <body className={classes.body}>
       <div className={classes.whatWeDo}>
         <img
-          src={require("../../assets/kanban_board_image.jpg").default}
+          src={require("../../assets/kanban_board_image.png").default}
           alt="Kanban board"
           className={classes.myImage}
         />
@@ -121,7 +121,10 @@ export default function Body() {
           />
         </div>
         <div className={classes.dropdownContent}>
-          <img src={require("../../assets/Picturereview1.png").default} alt="review 1" />
+          <img
+            src={require("../../assets/Picturereview1.png").default}
+            alt="review 1"
+          />
           <div className={classes.desc}>Amazing Review</div>
         </div>
       </div>
@@ -134,7 +137,10 @@ export default function Body() {
           />
         </div>
         <div className={classes.dropdownContent}>
-          <img src={require("../../assets/Picturereview1.png").default} alt="review 1" />
+          <img
+            src={require("../../assets/Picturereview1.png").default}
+            alt="review 1"
+          />
           <div className={classes.desc}>Amazing Review</div>
         </div>
       </div>
@@ -147,7 +153,10 @@ export default function Body() {
           />
         </div>
         <div className={classes.dropdownContent}>
-          <img src={require("../../assets/Picturereview1.png").default} alt="review 1" />
+          <img
+            src={require("../../assets/Picturereview1.png").default}
+            alt="review 1"
+          />
           <div className={classes.desc}>Amazing Review</div>
         </div>
       </div>
