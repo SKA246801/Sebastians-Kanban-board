@@ -16,7 +16,7 @@ h1 {
 
 header {
     padding: 20px 35px;
-    background-color: #274156;
+    background-color: rgb(230, 231, 231);
 }
 
 header h1 {
@@ -28,7 +28,7 @@ header h1 {
 }
 
 header a {
-    color: #F7F9F9;
+    color: #0E0E52;
     text-decoration: none;
 }
 
@@ -180,4 +180,12 @@ footer a {
     margin-left: 55%;
     width: 40%;
     padding: 2%;
+  }
+
+  #logo {
+      width: 7%;
+  }
+
+  .Brand {
+      display: inline-flex;
   }
